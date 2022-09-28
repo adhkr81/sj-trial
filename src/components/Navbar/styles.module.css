@@ -1,0 +1,88 @@
+/* MOBILE */
+@media only screen and (max-width: 767px) {
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        background-color: #B4B4B4;
+        color: white;
+        font-weight: 600;
+        font-size: 1.6em
+    }
+
+    .icon {
+        height: 20px;
+        margin-left: 0.6em;
+    }
+
+    .textDiv {
+        width: 75%;
+    }
+
+    .img {
+        margin-top: 5px;
+        margin-right: 0.4em;
+        height: 60px;
+    }
+}
+
+/* TABLET */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        background-color: #B4B4B4;
+        color: white;
+        font-weight: 600;
+        font-size: 2em
+    }
+
+    .icon {
+        height: 30px;
+        margin-left: 1em;
+    }
+
+    .textDiv {
+        width: 70%;
+    }
+
+    .img {
+        margin-top: 5px;
+        margin-right: 1em;
+        height: 70px;
+    }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1024px) {
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        background-color: #B4B4B4;
+        color: white;
+        font-weight: 600;
+        font-size: large;
+    }
+
+    .icon {
+        height: 15px;
+        margin-left: 1em;
+    }
+
+    .textDiv {
+        width: 87%;
+    }
+
+    .img {
+        margin-top: 5px;
+        margin-right: 1em;
+        height: 35px;
+    }
+}
