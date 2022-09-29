@@ -1,5 +1,5 @@
-/* MOBILE */
-@media only screen and (max-width: 767px) {
+/* MOBILE PORTRAIT*/
+@media only screen and (max-width: 767px) and (orientation : portrait)  {
 
     .container {
         display: flex;
@@ -21,8 +21,34 @@
     }
 }
 
-/* TABLET */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+/* MOBILE LANDSCAPE*/
+@media only screen and (max-width: 767px) and (orientation : landscape)  {
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        background-color: #80A2BF;
+        padding-top: 25px;
+    }
+
+    .card {
+        background-color: white;
+        width: 160px;
+        padding: 30px 0 30px 0;
+        margin: 3.4%;
+        border-radius: 10px;
+        font-size: 85px;
+        color: #4d4d4d;
+        text-align: center;
+        box-shadow: 1px 5px 10px rgba(0, 0, 0, .2)
+    }
+}
+
+/* TABLET PORTRAIT*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) and (orientation : portrait)  {
 
     .container {
         display: flex;
@@ -47,6 +73,33 @@
     }
 }
 
+/* TABLET LANDSCAPE*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) and (orientation : landscape)  {
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        background-color: #80A2BF;
+        padding-top: 25px;
+    }
+
+    .card {
+        background-color: white;
+        width: 240px;
+        padding: 60px 0 60px 0;
+        margin: 3.2%;
+        border-radius: 10px;
+        font-size: 100px;
+        color: #4d4d4d;
+        text-align: center;
+        box-shadow: 1px 5px 10px rgba(0, 0, 0, .2)
+    }
+}
+
+/* TABLET DESKTOP*/
 @media only screen and (min-width: 1024px) {
 
     .container {

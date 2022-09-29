@@ -2,7 +2,7 @@ import { useState } from "react"
 
 import { Navbar } from "./components/Navbar"
 import { Content } from "./components/Content"
-import { Menu } from "./components/Menu"
+import { Sidebar } from "./components/Sidebar"
 
 import styles from "./styles.module.css"
 
@@ -14,20 +14,18 @@ function App() {
 
 
   function handleAscend() {
-    console.log(filledArray)
     setCard(filledArray)    
   }    
 
   function handleDescend() {
-    const reverseArray = filledArray.reverse()
-    console.log(reverseArray)
+    const clone = [...filledArray]
+    const reverseArray = clone.reverse()
     setCard(reverseArray)
   }
 
   function handleRandom() {
     const clone = [...filledArray]
     const shuffledArray = clone.sort((a, b) => 0.5 - Math.random())
-    console.log(shuffledArray)
     setCard(shuffledArray)
   }    
 
@@ -35,7 +33,7 @@ function App() {
   return (
     <div className="App">
         <Navbar />
-        <Menu setCard={setCard} 
+        <Sidebar setCard={setCard} 
             filledArray={filledArray} 
             handleAscend={handleAscend}
             handleDescend={handleDescend}

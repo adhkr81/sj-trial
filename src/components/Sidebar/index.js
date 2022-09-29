@@ -1,6 +1,6 @@
 import styles from "./styles.module.css"
 
-export function Menu ({setCard, filledArray, handleAscend, handleDescend, handleRandom}) {
+export function Sidebar ({setCard, filledArray, handleAscend, handleDescend, handleRandom}) {
 
 
     return (
