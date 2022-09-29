@@ -3,6 +3,7 @@ import { useState } from "react"
 import { Navbar } from "./components/Navbar"
 import { Content } from "./components/Content"
 import { Sidebar } from "./components/Sidebar"
+import { Backdrop } from "./components/Backdrop"
 
 import styles from "./styles.module.css"
 
@@ -36,16 +37,27 @@ function App() {
   }
 
   console.log(slide)
+
+  let sideBar;
+  let backDrop;
+
+  if (slide) {
+    backDrop = <Backdrop />
+  }
   
   return (
     <div className="App">
+
         <Navbar handleSlide={handleSlide}
                 slide={slide}/>
 
         <Sidebar handleAscend={handleAscend}
                  handleDescend={handleDescend}
                  handleRandom={handleRandom}
-                 handleSlide={handleSlide}/>
+                 handleSlide={handleSlide}
+                 slide={slide}/>
+
+        {backDrop}
 
         <Content card={card}/>
     </div>

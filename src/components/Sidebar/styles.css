@@ -11,6 +11,13 @@
         background-color: #BDCCDA;
         top: 0;
         left: 0;
+        z-index: 200;
+        transform: translateX(0%);
+        transition: transform 0.3s ease-out;
+    }
+
+    .container-open {
+        transform: translateX(-100%)
     }
 
     .buttons {
@@ -56,6 +63,13 @@
         background-color: #BDCCDA;
         top: 0;
         left: 0;
+        z-index: 200;
+        transform: translateX(0%);
+        transition: transform 0.3s ease-out;
+    }
+
+    .container-open {
+        transform: translateX(-100%)
     }
 
     .buttons {
@@ -101,6 +115,13 @@
         background-color: #BDCCDA;
         top: 0;
         left: 0;
+        z-index: 200;
+        transform: translateX(0%);
+        transition: transform 0.3s ease-out;
+    }
+
+    .container-open {
+        transform: translateX(-100%)
     }
 
     .buttons {
@@ -114,6 +135,8 @@
         font-size: 1.5em;
         box-shadow: 1px 1.5px 2px rgba(0, 0, 0, .2);
         transition-duration: 0.3s;
+        transform: translateX(0%);
+
     }
 
     .buttons:hover {
@@ -121,10 +144,23 @@
         color: white;
     }
 
+    .buttons.open {
+        transform: translateX(-100%)
+    }
+
     .closeIcon {
         position: absolute;
         left: 490px;
-        top: 25px
+        top: 25px;
+        transform: translateX(0%);
+
+    }
+
+    .closeIcon.open {
+        position: absolute;
+        left: 490px;
+        top: 25px;
+        transform: translateX(-100%)
     }
 
     .btn {
@@ -146,6 +182,13 @@
         background-color: #BDCCDA;
         top: 0;
         left: 0;
+        z-index: 200;
+        transform: translateX(0);
+        transition: transform 0.3s ease-out
+    }
+
+    .container-open {
+        transform: translateX(-550px)
     }
 
     .buttons {
@@ -158,7 +201,7 @@
         font-weight: 550;
         font-size: 1.1em;
         box-shadow: 1px 1.5px 2px rgba(0, 0, 0, .2);
-        transition-duration: 0.3s;
+        transform: translateX(0%);
     }
 
     .buttons:hover {
@@ -166,10 +209,23 @@
         color: white;
     }
 
+    .buttons.open {
+        transform: translateX(-100%)
+    }
+
     .closeIcon {
         position: absolute;
         left: 490px;
-        top: 25px
+        top: 25px;
+        transform: translateX(0%);
+
+    }
+
+    .closeIcon.open {
+        position: absolute;
+        left: 490px;
+        top: 25px;
+        transform: translateX(-100%)
     }
 
     .btn {
@@ -183,7 +239,6 @@
 
     .container {
         position: fixed;
-        /* position: absolute; */
         display: flex;
         flex-direction: column;
         align-items: center;

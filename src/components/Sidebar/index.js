@@ -1,19 +1,19 @@
-import styles from "./styles.module.css"
+import styles from "./styles.css"
 import close from "../../assets/images/close.png"
 
-export function Sidebar ({handleAscend, handleDescend, handleRandom, handleSlide}) {
+export function Sidebar ({handleAscend, handleDescend, handleRandom, handleSlide, slide}) {
 
 
 
     return (
         <aside>
-            <div className={styles.container}>
-                <button className={styles.btn} onClick={handleSlide}>    
-                    <img src={close} className={styles.closeIcon}/>
+            <div id={"ahhh"} className={slide ? "container" : "container container-open"}>
+                <button className={"btn"} onClick={handleSlide}>    
+                    <img src={close} className={slide ? "closeIcon" : "closeIcon.open"}/>
                 </button>            
-                <button className={styles.buttons} onClick={handleAscend}>Ascending Order</button>
-                <button className={styles.buttons} onClick={handleDescend}>Descending Order</button>
-                <button className={styles.buttons} onClick={handleRandom}>Random Order</button>
+                <button className={slide? "buttons" : "buttons.open"} onClick={handleAscend}>Ascending Order</button>
+                <button className={slide? "buttons" : "buttons.open"} onClick={handleDescend}>Descending Order</button>
+                <button className={slide? "buttons" : "buttons.open"} onClick={handleRandom}>Random Order</button>
             </div>
         </aside>
     )
