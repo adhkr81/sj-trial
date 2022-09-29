@@ -144,7 +144,7 @@
         color: white;
     }
 
-    .buttons.open {
+    .buttons-open {
         transform: translateX(-100%)
     }
 
@@ -156,7 +156,7 @@
 
     }
 
-    .closeIcon.open {
+    .closeIcon-open {
         position: absolute;
         left: 490px;
         top: 25px;
@@ -209,7 +209,7 @@
         color: white;
     }
 
-    .buttons.open {
+    .buttons-open {
         transform: translateX(-100%)
     }
 
@@ -221,7 +221,7 @@
 
     }
 
-    .closeIcon.open {
+    .closeIcon-open {
         position: absolute;
         left: 490px;
         top: 25px;

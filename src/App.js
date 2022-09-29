@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import useWindowSize from "./utils/useWindowSize"
 
 import { Navbar } from "./components/Navbar"
 import { Content } from "./components/Content"
@@ -9,11 +10,23 @@ import styles from "./styles.module.css"
 
 function App() {
 
+
   let filledArray = Array.from({length: 20}, (_, i) => i + 1)
 
   const [ card, setCard ] = useState(filledArray)
 
   const [ slide, setSlide ] = useState(false)
+ 
+  const { width } = useWindowSize()
+
+
+
+  useEffect(() => {
+      if (width > 1023) {
+        setSlide(true)
+
+    }
+  },[])
 
 
   function handleAscend() {
@@ -36,12 +49,11 @@ function App() {
     setSlide(!slide)
   }
 
-  console.log(slide)
-
-  let sideBar;
   let backDrop;
 
-  if (slide) {
+  if (slide && width > 1023) {
+    backDrop = null;
+  } else if (slide) {
     backDrop = <Backdrop />
   }
   
