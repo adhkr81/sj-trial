@@ -1,0 +1,33 @@
+/* DESKTOP */
+@media only screen and (min-width: 1024px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 35px;
+        width: 230px;
+        height: 100%;
+        background-color: #BDCCDA;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    .buttons {
+        background-color: white;
+        margin: 12px;
+        border: 0;
+        width: 92%;
+        height: 50px;
+        color: #787878;
+        font-weight: 550;
+        font-size: 1em;
+        transition-duration: 0.3s;
+    }
+
+    .buttons:hover {
+        background-color: #7b7b7b;
+        color: white;
+    }
+}

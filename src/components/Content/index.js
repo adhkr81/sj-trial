@@ -1,16 +1,14 @@
 import styles from "./styles.module.css"
 
-export function Content () {
+export function Content({card}) {
 
-
-    function CreateCards() {
-        let filledArray = Array.from({length: 20}, (_, i) => i + 1)
-        return filledArray.map((current) => <div className={styles.card}>{current}</div>)
+    function GetCards() {
+        return card.map((current) => <div key={current} className={styles.card}>{current}</div>)
     }
 
     return (
         <div className={styles.container}>
-            <CreateCards />
+            <GetCards />
         </div>
     )
 }
