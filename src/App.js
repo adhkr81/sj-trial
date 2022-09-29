@@ -12,6 +12,8 @@ function App() {
 
   const [ card, setCard ] = useState(filledArray)
 
+  const [ slide, setSlide ] = useState(false)
+
 
   function handleAscend() {
     setCard(filledArray)    
@@ -27,17 +29,24 @@ function App() {
     const clone = [...filledArray]
     const shuffledArray = clone.sort((a, b) => 0.5 - Math.random())
     setCard(shuffledArray)
-  }    
+  }
+  
+  function handleSlide() {
+    setSlide(!slide)
+  }
 
+  console.log(slide)
   
   return (
     <div className="App">
-        <Navbar />
-        <Sidebar setCard={setCard} 
-            filledArray={filledArray} 
-            handleAscend={handleAscend}
-            handleDescend={handleDescend}
-            handleRandom={handleRandom}/>
+        <Navbar handleSlide={handleSlide}
+                slide={slide}/>
+
+        <Sidebar handleAscend={handleAscend}
+                 handleDescend={handleDescend}
+                 handleRandom={handleRandom}
+                 handleSlide={handleSlide}/>
+
         <Content card={card}/>
     </div>
   );

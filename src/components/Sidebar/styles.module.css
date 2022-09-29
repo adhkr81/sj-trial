@@ -1,7 +1,189 @@
+/* MOBILE PORTRAIT*/
+@media only screen and (max-width: 767px) and (orientation : portrait) {
+    .container {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 33%;
+        width: 260px;
+        height: 100%;
+        background-color: #BDCCDA;
+        top: 0;
+        left: 0;
+    }
+
+    .buttons {
+        background-color: white;
+        margin: 14px;
+        border: 0;
+        width: 75%;
+        height: 50px;
+        color: #787878;
+        font-weight: 550;
+        font-size: 1.1em;
+        box-shadow: 1px 1.5px 2px rgba(0, 0, 0, .2);
+        transition-duration: 0.3s;
+    }
+
+    .buttons:hover {
+        background-color: #7b7b7b;
+        color: white;
+    }
+
+    .closeIcon {
+        position: absolute;
+        left: 200px;
+        top: 25px
+    }
+
+    .btn {
+        border: 0;
+        background-color: #BDCCDA
+    }    
+}
+
+/* MOBILE LANDSCAPE*/
+@media only screen and (max-width: 767px) and (orientation : landscape) {
+    .container {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 33%;
+        width: 260px;
+        height: 100%;
+        background-color: #BDCCDA;
+        top: 0;
+        left: 0;
+    }
+
+    .buttons {
+        background-color: white;
+        margin: 14px;
+        border: 0;
+        width: 75%;
+        height: 50px;
+        color: #787878;
+        font-weight: 550;
+        font-size: 1.1em;
+        box-shadow: 1px 1.5px 2px rgba(0, 0, 0, .2);
+        transition-duration: 0.3s;
+    }
+
+    .buttons:hover {
+        background-color: #7b7b7b;
+        color: white;
+    }
+
+    .closeIcon {
+        position: absolute;
+        left: 200px;
+        top: 25px
+    }
+
+    .btn {
+        border: 0;
+        background-color: #BDCCDA
+    }  
+}
+
+/* TABLET PORTRAIT*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) and (orientation : portrait) {
+    .container {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 33%;
+        width: 550px;
+        height: 100%;
+        background-color: #BDCCDA;
+        top: 0;
+        left: 0;
+    }
+
+    .buttons {
+        background-color: white;
+        margin: 20px;
+        border: 0;
+        width: 75%;
+        height: 80px;
+        color: #787878;
+        font-weight: 550;
+        font-size: 1.5em;
+        box-shadow: 1px 1.5px 2px rgba(0, 0, 0, .2);
+        transition-duration: 0.3s;
+    }
+
+    .buttons:hover {
+        background-color: #7b7b7b;
+        color: white;
+    }
+
+    .closeIcon {
+        position: absolute;
+        left: 490px;
+        top: 25px
+    }
+
+    .btn {
+        border: 0;
+        background-color: #BDCCDA
+    }  
+}
+
+/* TABLET LANDSCAPE*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) and (orientation : landscape) {
+    .container {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 33%;
+        width: 550px;
+        height: 100%;
+        background-color: #BDCCDA;
+        top: 0;
+        left: 0;
+    }
+
+    .buttons {
+        background-color: white;
+        margin: 14px;
+        border: 0;
+        width: 75%;
+        height: 50px;
+        color: #787878;
+        font-weight: 550;
+        font-size: 1.1em;
+        box-shadow: 1px 1.5px 2px rgba(0, 0, 0, .2);
+        transition-duration: 0.3s;
+    }
+
+    .buttons:hover {
+        background-color: #7b7b7b;
+        color: white;
+    }
+
+    .closeIcon {
+        position: absolute;
+        left: 490px;
+        top: 25px
+    }
+
+    .btn {
+        border: 0;
+        background-color: #BDCCDA
+    }  
+}
+
 /* DESKTOP */
 @media only screen and (min-width: 1024px) {
 
     .container {
+        position: fixed;
+        /* position: absolute; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -9,7 +191,6 @@
         width: 230px;
         height: 100%;
         background-color: #BDCCDA;
-        position: absolute;
         top: 50px;
         left: 0;
     }
@@ -31,4 +212,14 @@
         background-color: #7b7b7b;
         color: white;
     }
+
+    .closeIcon {
+        position: absolute;
+        left: -100px;
+    }
+
+    .btn {
+        border: 0;
+        background-color: #BDCCDA
+    }  
 }
