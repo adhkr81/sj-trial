@@ -50,21 +50,28 @@
 /* TABLET PORTRAIT*/
 @media only screen and (min-width: 768px) and (max-width: 1023px) and (orientation : portrait)  {
 
+    .centralizer {
+        display: flex;
+        justify-content: center;
+        background-color: #80A2BF;
+    }
+
     .container {
+        width: 680px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
         justify-content: flex-start;
         background-color: #80A2BF;
-        padding-top: 85px;
+        padding-top: 130px;
     }
 
     .card {
         background-color: white;
         width: 280px;
         padding: 50px 0 50px 0;
-        margin: 4%;
+        margin: 30px;
         border-radius: 10px;
         font-size: 140px;
         color: #4d4d4d;
@@ -76,6 +83,11 @@
 /* TABLET LANDSCAPE*/
 @media only screen and (min-width: 768px) and (max-width: 1023px) and (orientation : landscape)  {
 
+    .centralizer {
+        display: flex;
+        justify-content: center;
+        background-color: #80A2BF;
+    }
     .container {
         display: flex;
         flex-direction: row;
@@ -102,8 +114,16 @@
 /* TABLET DESKTOP*/
 @media only screen and (min-width: 1024px) {
 
-    .container {
+    .centralizer {
         margin-left: 230px;
+        display: flex;
+        justify-content: center;
+        background-color: #80A2BF;
+    }
+
+    .container {
+        width: 700px;
+        margin: auto;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -115,11 +135,11 @@
 
     .card {
         background-color: white;
-        width: 175px;
-        padding: 20px 0 20px 0;
-        margin: 3%;
+        width: 130px;
+        padding: 25px 0 25px 0;
+        margin: 20px;
         border-radius: 10px;
-        font-size: 100px;
+        font-size: 60px;
         color: #4d4d4d;
         text-align: center;
         box-shadow: 1px 5px 10px rgba(0, 0, 0, .2)

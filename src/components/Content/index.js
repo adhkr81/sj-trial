@@ -7,8 +7,10 @@ export function Content({card}) {
     }
 
     return (
-        <div className={styles.container}>
-            <GetCards />
-        </div>
+        <main className={styles.centralizer}>
+            <div className={styles.container}>
+                <GetCards />
+            </div>
+        </main>
     )
 }
