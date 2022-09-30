@@ -10,15 +10,31 @@ import styles from "./styles.module.css"
 
 function App() {
 
-
-  let filledArray = Array.from({length: 21}, (_, i) => i + 1)
+  const filledArray = Array.from({length: 21}, (_, i) => i + 1)
 
   const [ card, setCard ] = useState(filledArray)
 
   const [ slide, setSlide ] = useState(false)
+
+  const [ currentPage, setCurrentPage ] = useState(1)
  
   const { width } = useWindowSize()
 
+    //INFINITE SCROLL
+    useEffect(() => {
+      const intersectionObserver = new IntersectionObserver((entries) => {
+        console.log(entries)
+  
+        if(entries.some((entry) => entry.isIntersecting)) {
+          console.log("element is visible")
+          setCurrentPage(currentPage + 1)
+          setCard([...card, ...filledArray])
+        }})
+  
+      intersectionObserver.observe(document.querySelector("#observer"))
+  
+      return () => intersectionObserver.disconnect()
+    }, [currentPage])
 
 
   useEffect(() => {
@@ -62,8 +78,7 @@ function App() {
     backDrop = <Backdrop />
   } 
 
-  console.log(slide)
-  
+
   return (
     <div className="App">
 
@@ -74,11 +89,14 @@ function App() {
                  handleDescend={handleDescend}
                  handleRandom={handleRandom}
                  handleSlide={handleSlide}
-                 slide={slide}/>
+                 slide={slide}
+                 currentPage={currentPage}/>
 
         {backDrop}
 
         <Content card={card}/>
+
+        <div id={"observer"} style={{backgroundColor: "red", height: "20px", marginTop: "30px"}}></div>
     </div>
   );
 }

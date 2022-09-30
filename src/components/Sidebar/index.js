@@ -1,7 +1,7 @@
 import styles from "./styles.css"
 import close from "../../assets/images/close.png"
 
-export function Sidebar ({handleAscend, handleDescend, handleRandom, handleSlide, slide}) {
+export function Sidebar ({handleAscend, handleDescend, handleRandom, handleSlide, slide, currentPage}) {
 
 
 
@@ -14,6 +14,7 @@ export function Sidebar ({handleAscend, handleDescend, handleRandom, handleSlide
                 <button className={slide? "buttons" : "buttons buttons-open"} onClick={handleAscend}>Ascending Order</button>
                 <button className={slide? "buttons" : "buttons buttons-open"} onClick={handleDescend}>Descending Order</button>
                 <button className={slide? "buttons" : "buttons buttons-open"} onClick={handleRandom}>Random Order</button>
+                <div style={{marginTop: "50px"}}>Page {currentPage}</div>
             </div>
         </aside>
     )

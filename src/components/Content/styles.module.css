@@ -116,6 +116,7 @@
 
     .centralizer {
         margin-left: 230px;
+        height: 100%;
         display: flex;
         justify-content: center;
         background-color: #80A2BF;
@@ -123,6 +124,7 @@
 
     .container {
         width: 700px;
+        height: 100%;
         margin: auto;
         display: flex;
         flex-direction: row;
