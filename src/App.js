@@ -11,7 +11,7 @@ import styles from "./styles.module.css"
 function App() {
 
 
-  let filledArray = Array.from({length: 20}, (_, i) => i + 1)
+  let filledArray = Array.from({length: 21}, (_, i) => i + 1)
 
   const [ card, setCard ] = useState(filledArray)
 
@@ -24,9 +24,14 @@ function App() {
   useEffect(() => {
       if (width > 1023) {
         setSlide(true)
-
     }
   },[])
+
+  useEffect(() => {
+    if (width < 1023) {
+      setSlide(false)
+  }
+},[width])
 
 
   function handleAscend() {
@@ -55,7 +60,9 @@ function App() {
     backDrop = null;
   } else if (slide) {
     backDrop = <Backdrop />
-  }
+  } 
+
+  console.log(slide)
   
   return (
     <div className="App">
